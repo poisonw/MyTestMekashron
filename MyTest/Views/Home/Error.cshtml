@@ -1,0 +1,5 @@
+﻿@model Dictionary<string, string>
+
+<div class="alert alert-danger" role="alert">
+    Error: @Html.Raw(string.Join("<br/>", Model.Select(x => x.Key + " = " + x.Value)))
+</div>

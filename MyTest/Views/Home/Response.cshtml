@@ -1,0 +1,6 @@
+﻿@model Dictionary<string, string>
+
+<div class="alert alert-success" role="alert">
+    @Html.Raw(string.Join("<br/>", Model.Select(x => x.Key + " = " + x.Value)))
+</div>
+

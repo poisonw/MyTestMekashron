@@ -1,0 +1,22 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row justify-content-center" id="alert_result">
+    <div id="loadingspinner" class="spinner-border text-success mt-3" style="width: 3rem; height: 3rem; display:none;" role="status">
+    </div>
+</div>
+
+@using (Ajax.BeginForm("Login", "Home", null, new AjaxOptions { UpdateTargetId = "alert_result", LoadingElementId = "loadingspinner" }))
+{
+    <div class="row justify-content-center">
+        <div class="form-group align-content-center" style="border: 1px solid; padding: 20px 30px">
+            <label for="exampleInputEmail1">Username:</label>
+            <input name="email" type="text" class="form-control">
+            <label for="exampleInputPassword1">Password:</label>
+            <input name="password" type="password" class="form-control">
+            <button type="submit" class="btn btn-primary active d-block mx-auto" style="margin-top: 15px">Submit</button>
+        </div>
+    </div>
+}
+
